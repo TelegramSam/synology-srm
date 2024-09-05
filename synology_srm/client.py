@@ -4,6 +4,7 @@ from synology_srm.http import Http
 from synology_srm.api.base import ApiBase
 from synology_srm.api.core import ApiCore
 from synology_srm.api.mesh import ApiMesh
+from synology_srm.api.safeaccess import ApiSafeAccess
 
 
 class Client(object):
@@ -26,6 +27,7 @@ class Client(object):
             'base': ApiBase(self.http),
             'core': ApiCore(self.http),
             'mesh': ApiMesh(self.http),
+            'safeaccess': ApiSafeAccess(self.http),
         }
 
     def __getattr__(self, item):
