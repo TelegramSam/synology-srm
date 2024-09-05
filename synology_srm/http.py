@@ -180,8 +180,10 @@ class Http(object):
                 code,
                 message,
             )
-
-        return data['data']
+        if 'data' in data:
+            return data['data']
+        else: 
+            return data
 
     def _get_common_error_message(self, code):
         """Gets the official message errror from
