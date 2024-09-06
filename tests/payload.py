@@ -439,3 +439,40 @@ LIST_CERTIFICATE_PAYLOAD = {
     },
     'success': True
 }
+
+SAFE_ACCESS_STATUS_PAYLOAD = {
+'data': {
+    'config_groups': [
+        {'config_group_id': 3,
+        'name': '$guest_network$',
+        'pause': False,
+        'profile_id': 3,
+        'rewards': {'ultra_rewards': []},
+        'timespent': {'has_quota': False,
+                        'quota': 0,
+                        'total_spent': {'normal': 0, 'reward': 0}}},
+        {'config_group_id': 4,
+        'name': 'Alice',
+        'pause': False,
+        'profile_id': 4,
+        'rewards': {'ultra_rewards': [{'available': 1725586620,
+                                        'expired': 1725590220}]},
+        'timespent': {'has_quota': True,
+                        'quota': 240,
+                        'total_spent': {'normal': 24, 'reward': 0}}},
+        {'config_group_id': 5,
+        'name': 'Bob',
+        'pause': False,
+        'profile_id': 5,
+        'rewards': {'ultra_rewards': []},
+        'timespent': {'has_quota': True,
+                        'quota': 120,
+                        'total_spent': {'normal': 0, 'reward': 0}}}
+        ]
+},
+'success': True
+}
+
+PUT_SUCCESS_RESPONSE = {
+    'success': True
+}
